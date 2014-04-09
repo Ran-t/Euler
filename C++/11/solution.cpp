@@ -43,9 +43,9 @@ int vector_pass( const vector<uint8_t>& matrix ){
     // Horizontal pass (3, 0)
     // Vertical pass (0, -3)
     // Diagonal pass (3, 3)
-    for (size_t i = 0; i < matrix.size(); ++i){
-        if ( (i+4) % 20 == 0 )
-            i += 4;
+    for ( size_t i = 0; i < matrix.size(); ++i ){
+        if ( (i+3) % 20 == 0 )
+            i += 3; 
 
         horizontalP = matrix[i+0] * matrix[i+1]
                     * matrix[i+2] * matrix[i+3];
@@ -68,8 +68,8 @@ int vector_pass( const vector<uint8_t>& matrix ){
 
     // Antidiagonal pass (-3, -3)
     for ( size_t i = (matrix.size() - 60); i > 4; --i ){
-        if ( (i-4) % 20 == 0)
-            i -= 4;
+        if ( (i-3) % 19 == 0 )
+            i -= 3;
 
         antidiagonalP = matrix[i+19*0] * matrix[i+19*1]
                       * matrix[i+19*2] * matrix[i+19*3];
@@ -84,7 +84,7 @@ int vector_pass( const vector<uint8_t>& matrix ){
 int maximum( int** n,const int& l ){
     int max = 0;
 
-    for (int i = 0; i < l; ++i)
+    for ( int i = 0; i < l; ++i )
         max = (*n[i] > max)? *n[i] : max;
 
     return max;
