@@ -70,7 +70,7 @@ int vector_pass( const vector<uint8_t>& matrix ){
 
 
     // Antidiagonal pass (-3, -3)
-    for (size_t i = (matrix.size() - 60); i > 4; --i){
+    for ( size_t i = (matrix.size() - 60); i > 4; --i ){
         if ( (i-4) % 20 == 0)
             i -= 4;
 
@@ -84,7 +84,7 @@ int vector_pass( const vector<uint8_t>& matrix ){
 
 }
 
-int maximum(int** n,const int& l){
+int maximum( int** n,const int& l ){
     int max = 0;
 
     for (int i = 0; i < l; ++i)
