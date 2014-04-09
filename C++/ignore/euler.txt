@@ -1,0 +1,20 @@
+%problem 1 233168
+
+Mults :: (Int a) => [a] -> [a]
+
+Mults [] = []
+
+Mults (x:xs)
+        | mod x 3 == 0        = x : Mults xs
+        | mod x 5 == 0        = x : Mults xs
+        | otherwise           = Mults xs
+
+sum (Mults [1..1000])
+
+%problem 2
+
+fibonacci :: (Int a) => a -> a -> a -> [a]
+
+fibonacci [] = []
+
+fib n = fib (n - 1) + fib (n - 2)
