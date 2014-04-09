@@ -8,19 +8,17 @@ typedef unsigned char uint8_t;
 
 
 int vector_pass( const vector<uint8_t>& );
-int maximum(int** n,const int& l); // l = length
+int maximum( int** n,const int& l ); // l = length
 
-int main(int argc, char* argv[]){
+int main( int argc, char* argv[] ){
 
-    // Technically we only need 6 bits for positive 2-digit decimal numbers
-    // but a byte is the minimum data size.
     vector<uint8_t> matrix;
 
     ifstream file ("grid.dat");
 
     int n;
-    while (file >> n)
-        matrix.push_back(static_cast<uint8_t>( n ));
+    while ( file >> n )
+        matrix.push_back( static_cast<uint8_t>( n ) );
 
     cout << vector_pass( matrix ) << endl;
 
@@ -32,7 +30,7 @@ int vector_pass( const vector<uint8_t>& matrix ){
     
     int n = 0;
     int m = 0;
-    int horizontalP, verticalP, // ______P -- _____Product
+    int horizontalP, verticalP, // horizontalProduct, verticalProduct, etc...
         diagonalP, antidiagonalP;
 
 
@@ -49,7 +47,7 @@ int vector_pass( const vector<uint8_t>& matrix ){
     // Vertical pass (0, -3)
     // Diagonal pass (3, 3)
     for (size_t i = 0; i < matrix.size(); ++i){
-        if ( (i+4) % 20 == 0)
+        if ( (i+4) % 20 == 0 )
             i += 4;
 
         horizontalP = matrix[i+0] * matrix[i+1]
