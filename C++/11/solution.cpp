@@ -34,9 +34,6 @@ int vector_pass( const vector<uint8_t>& matrix ){
         diagonalP, antidiagonalP;
 
 
-    // vs = vectors
-    // The C++ container called a vector is both
-    // unfortunate and ironic: http://stackoverflow.com/a/758548
     int *vs[] = { &horizontalP
                 , &verticalP
                 , &diagonalP
