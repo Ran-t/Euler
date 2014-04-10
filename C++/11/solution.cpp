@@ -44,7 +44,7 @@ int vector_pass( const vector<uint8_t>& matrix ){
     // Vertical pass (0, -3)
     // Diagonal pass (3, 3)
     for ( size_t i = 0; i < matrix.size(); ++i ){
-        if ( (i+3) % 20 == 0 )
+        if ( (i+3) % 19 == 0 )
             i += 3; 
 
         horizontalP = matrix[i+0] * matrix[i+1]
@@ -68,7 +68,7 @@ int vector_pass( const vector<uint8_t>& matrix ){
 
     // Antidiagonal pass (-3, -3)
     for ( size_t i = (matrix.size() - 60); i > 4; --i ){
-        if ( (i-3) % 19 == 0 )
+        if ( (i-3) % 20 == 0 )
             i -= 3;
 
         antidiagonalP = matrix[i+19*0] * matrix[i+19*1]
