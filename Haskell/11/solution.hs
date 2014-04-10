@@ -4,7 +4,7 @@ import Data.Vector.Unboxed (Vector, fromList, (!))
 main = print $ vectorPass
         
 
-vectorPass = antidiagonalPass 339 . commonPass 0 $ 0
+vectorPass = antidiagonalPass 342 . commonPass 0 $ 0
 commonPass ix n
     | (ix == 399)           = n
     | (mod (ix+3) 19 == 0)  = commonPass (ix+3) n
