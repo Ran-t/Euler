@@ -3,7 +3,7 @@
 using namespace std;
 
 
-void compute_chain_length(const int&);
+void compute_chain_length( const int& );
 
 unordered_map<int, int> precomputed_chains;
 
@@ -13,12 +13,12 @@ int main()
     int hl_key = 0;
 
     //generate an unordered_map of <starting number, collatz sequence length> pairs
-    for(int i = 2; i < 1000000; ++i)
-        compute_chain_length(i);
+    for( int i = 2; i < 1000000; ++i )
+        compute_chain_length( i );
     
     //find the highest value in the unordered_map.
     for( auto it : precomputed_chains )
-        if(it.second > highest_length){
+        if( it.second > highest_length ){
             highest_length = it.second;
             hl_key = it.first;
         }
@@ -29,18 +29,18 @@ int main()
     return 0;
 } 
 
-void compute_chain_length(const int& head){
+void compute_chain_length( const int& head ){
 
     unsigned int n = head;
     unsigned int length = 0;
 
     while ( n != 1 ){
 
-        if( precomputed_chains.count(n) > 0 ){
+        if( precomputed_chains.count( n ) > 0 ){
 
             length +=  precomputed_chains[n];
 
-            precomputed_chains.insert(pair<int, int>(head, length));
+            precomputed_chains.insert( pair<int, int>(head, length) );
 
             return;
             }
