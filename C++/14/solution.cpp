@@ -31,8 +31,8 @@ int main()
 
 void compute_chain_length(const int& head){
 
-    uint32_t n = head;
-    uint64_t length = 0;
+    unsigned int n = head;
+    unsigned int length = 0;
 
     while ( n != 1 ){
 

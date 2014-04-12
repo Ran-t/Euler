@@ -1,6 +1,6 @@
 (Starting number, length)
 (837799, 524)
 
-real	0m0.630s
-user	0m0.592s
-sys	0m0.036s
+real	0m0.633s
+user	0m0.616s
+sys	0m0.012s
