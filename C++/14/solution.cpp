@@ -1,5 +1,3 @@
-//collatz.cpp -- 
-//        This program solves the project euler problem 14: "Which starting number, under one million, produces the longest collatz chain?". Using a hash table (unordered_map) to speed up the process since we don't actually need the collatz chains themselves; just the starting number and lengths.
 #include <iostream>
 #include <vector>
 #include <unordered_map>
@@ -20,11 +18,10 @@ int main()
         compute_chain_length(i);
     
     //find the highest value in the unordered_map.
-    for(unordered_map<int, int>::iterator it = precomputed_chains.begin();
-                                          it != precomputed_chains.end(); ++it)
-        if(it->second > highest_length){
-            highest_length = it-> second;
-            hl_key = it->first;
+    for( auto it : precomputed_chains )
+        if(it.second > highest_length){
+            highest_length = it.second;
+            hl_key = it.first;
         }
 
     cout << "(Starting number, length)\n(" 
