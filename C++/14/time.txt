@@ -1,6 +1,7 @@
-(Starting number, length)
-(837799, 524)
+g++ solution.cpp -std=c++11 -O3
+time ./a.out
+837799
 
 real	0m0.633s
-user	0m0.616s
-sys	0m0.012s
+user	0m0.600s
+sys	0m0.028s

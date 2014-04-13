@@ -7,26 +7,26 @@ using namespace std;
 typedef unsigned char uint8_t;
 
 
-int vector_pass( const vector<uint8_t>& );
-int maximum( int** n,const int& l ); // l = length
+int vector_pass(const vector<uint8_t>&);
+int maximum(int** n,const int& l); // l = length
 
-int main( int argc, char* argv[] ){
+int main(int argc, char* argv[]){
 
     vector<uint8_t> matrix;
 
     ifstream file ("grid.dat");
 
     int n;
-    while ( file >> n )
-        matrix.push_back( static_cast<uint8_t>( n ) );
+    while (file >> n)
+        matrix.push_back(static_cast<uint8_t>(n));
 
-    cout << vector_pass( matrix ) << endl;
+    cout << vector_pass(matrix) << endl;
 
 
     return 0;
 }
 
-int vector_pass( const vector<uint8_t>& matrix ){
+int vector_pass(const vector<uint8_t>& matrix){
     
     int n = 0;
     int m = 0;
@@ -43,8 +43,8 @@ int vector_pass( const vector<uint8_t>& matrix ){
     // Horizontal pass (3, 0)
     // Vertical pass (0, -3)
     // Diagonal pass (3, 3)
-    for ( size_t i = 0; i < 400; ++i ){
-        if ( (i+3) % 19 == 0 )
+    for (auto i : matrix){
+        if ((i+3) % 19 == 0)
             i += 3; 
 
         horizontalP = matrix[i+0] * matrix[i+1]
@@ -67,8 +67,8 @@ int vector_pass( const vector<uint8_t>& matrix ){
 
 
     // Antidiagonal pass (-3, -3)
-    for ( size_t i = (342); i > 4; --i ){
-        if ( (i-3) % 20 == 0 )
+    for (size_t i = (342); i > 4; --i){
+        if ((i-3) % 20 == 0)
             i -= 3;
 
         antidiagonalP = matrix[i+19*0] * matrix[i+19*1]
@@ -81,10 +81,10 @@ int vector_pass( const vector<uint8_t>& matrix ){
 
 }
 
-int maximum( int** n,const int& l ){
+int maximum(int** n,const int& l){
     int max = 0;
 
-    for ( int i = 0; i < l; ++i )
+    for (int i = 0; i < l; ++i)
         max = (*n[i] > max)? *n[i] : max;
 
     return max;

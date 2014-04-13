@@ -1,3 +1,6 @@
+ghc solution.hs -o solution.bin -O3
+Linking solution.bin ...
+time ./solution.bin
 233168
 
 real	0m0.005s

@@ -1,0 +1,27 @@
+	Sat Apr 12 08:03 2014 Time and Allocation Profiling Report  (Final)
+
+	   solution +RTS -hc -p -RTS
+
+	total time  =        0.00 secs   (1 ticks @ 1000 us, 1 processor)
+	total alloc =     232,944 bytes  (excludes profiling overheads)
+
+COST CENTRE MODULE           %time %alloc
+
+digits      Main             100.0   67.7
+CAF         GHC.IO.Encoding    0.0    1.2
+CAF         GHC.IO.Handle.FD   0.0   14.9
+main        Main               0.0   15.5
+
+
+                                                      individual     inherited
+COST CENTRE MODULE                  no.     entries  %time %alloc   %time %alloc
+
+MAIN        MAIN                     45           0    0.0    0.3   100.0  100.0
+ main       Main                     91           0    0.0    4.4     0.0    4.4
+ CAF        Main                     89           0    0.0    0.0   100.0   78.9
+  main      Main                     90           1    0.0   11.1   100.0   78.8
+   digits   Main                     92         303  100.0   67.7   100.0   67.7
+ CAF        GHC.IO.Handle.FD         87           0    0.0   14.9     0.0   14.9
+ CAF        GHC.Conc.Signal          85           0    0.0    0.3     0.0    0.3
+ CAF        GHC.IO.Encoding          76           0    0.0    1.2     0.0    1.2
+ CAF        GHC.IO.Encoding.Iconv    60           0    0.0    0.1     0.0    0.1
