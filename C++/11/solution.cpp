@@ -10,7 +10,7 @@ typedef unsigned char uint8_t;
 int vector_pass(const vector<uint8_t>&);
 int maximum(int** n,const int& l); // l = length
 
-int main(int argc, char* argv[]){
+int main(){
 
     vector<uint8_t> row;
 
