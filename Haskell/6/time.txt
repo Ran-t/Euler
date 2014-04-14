@@ -1,7 +1,0 @@
-ghc solution.hs -o solution.bin -O3
-time ./solution.bin
-25164150
-
-real	0m0.026s
-user	0m0.004s
-sys	0m0.000s

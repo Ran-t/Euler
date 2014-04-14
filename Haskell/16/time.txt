@@ -1,9 +1,0 @@
-ghc solution.hs -o solution.bin -O3
-[1 of 1] Compiling Main             ( solution.hs, solution.o )
-Linking solution.bin ...
-time ./solution.bin
-1366
-
-real	0m0.002s
-user	0m0.000s
-sys	0m0.000s
