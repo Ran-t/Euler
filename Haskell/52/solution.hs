@@ -10,7 +10,7 @@ eqDigits (x:y:xs) | (x == y)    = eqDigits (y:xs)
                   | otherwise  = False
 
 products :: Int -> [Int]
-products n = map ($ n) $ map (*) [1..6]
+products n = map (*n) [1..6]
 
 solution  :: Int
 solution' :: Int -> Int
