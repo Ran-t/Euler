@@ -1,0 +1,7 @@
+g++ solution.cpp -std=c++11 -O3
+time ./a.out
+70600674
+
+real	0m0.004s
+user	0m0.000s
+sys	0m0.000s
