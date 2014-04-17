@@ -1,0 +1,14 @@
+C++/ignore/
+Haskell/ignore/
+problems
+Problems/
+*.swp
+*.swo
+*.hi
+*.o
+*.bin
+*.aux
+*.hp
+a.out
+cpp
+hs
