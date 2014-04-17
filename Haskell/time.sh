@@ -7,3 +7,5 @@ $compile >> time.txt
 echo -e "\ntime ./solution.bin" >> time.txt
 (time ./solution.bin) &>> time.txt
 
+
+cat time.txt

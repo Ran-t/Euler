@@ -2,6 +2,6 @@ g++ solution.cpp -std=c++11 -O3
 time ./a.out
 837799
 
-real	0m0.633s
-user	0m0.600s
-sys	0m0.028s
+real	0m0.640s
+user	0m0.604s
+sys	0m0.032s
