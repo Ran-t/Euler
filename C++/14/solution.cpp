@@ -35,28 +35,19 @@ void compute_chain_length(const int& head){
     unsigned int n = head;
     unsigned int length = 0;
 
-    while (n != 1){
+    while(n != 1){
 
         if(precomputed_chains.count(n) > 0){
-
             length +=  precomputed_chains[n];
-
-            precomputed_chains.insert(pair<int, int>(head, length));
-
-            return;
-            }
-
-        else if(n % 2 == 0){
+            n = 1;
+        }else if(n % 2 == 0){
             n /= 2;
             ++length;
-        }
-        else{
+        }else{
             n = n*3+1;
             ++length;
         }
     }
 
     precomputed_chains.insert(pair<int, int>(head, length));
-
-    return;
 }

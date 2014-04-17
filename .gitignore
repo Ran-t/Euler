@@ -9,6 +9,8 @@ Problems/
 *.bin
 *.aux
 *.hp
+massif*
+callgrind*
 a.out
 cpp
 hs

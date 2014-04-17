@@ -1,6 +1,5 @@
 import Data.List (sort)
 
-digits :: Int -> [Int]
 digits 0 = []
 digits n = n `rem` 10 : digits (n `quot` 10)
 
